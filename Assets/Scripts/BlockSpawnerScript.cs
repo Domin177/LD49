@@ -107,7 +107,8 @@ public class BlockSpawnerScript : MonoBehaviour
         {
             Destroy(block);
         }
-        this.camera.position = new Vector3(this.camera.position.x, cameraDefaultY, this.camera.position.z);
+        newCameraPosition = new Vector3(camera.position.x, cameraDefaultY, camera.position.z);
+        this.camera.position = newCameraPosition;
         this.canSpawnChecker = true;
         canSpawn = true;
     }
