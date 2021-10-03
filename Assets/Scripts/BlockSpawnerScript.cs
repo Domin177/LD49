@@ -44,6 +44,12 @@ public class BlockSpawnerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameState.gameOver)
+        {
+            newCameraPosition = new Vector3(camera.position.x, cameraDefaultY, camera.position.z);
+            camera.position = Vector3.MoveTowards(camera.position, newCameraPosition, 1f * Time.deltaTime);
+        }
+        
         if (!GameState.running || GameState.gameOver) return;
 
         if (canSpawn)

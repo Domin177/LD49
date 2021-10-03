@@ -59,4 +59,9 @@ public class ScoreScript : MonoBehaviour
     {
         return actualScoreValue;
     }
+    
+    public int getMaximumScore()
+    {
+        return maxScoreValue;
+    }
 }

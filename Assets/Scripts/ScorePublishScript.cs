@@ -39,7 +39,7 @@ public class ScorePublishScript : MonoBehaviour
         this.btnPublishScore.gameObject.SetActive(false);
         this.closeButton.gameObject.SetActive(true);
         
-        sendGameResult(scoreScript.getActualScore(), _timerScript.getTimeInSeconds(), name);
+        sendGameResult(scoreScript.getMaximumScore(), _timerScript.getTimeInSeconds(), name);
     }
 
     private bool isNameValid(string name)
@@ -58,7 +58,7 @@ public class ScorePublishScript : MonoBehaviour
         this.closeButton.gameObject.SetActive(false);
         
         _menuScript.hideAll();
-        publishScoreText.text = scoreScript.getActualScore().ToString();
+        publishScoreText.text = scoreScript.getMaximumScore().ToString();
     }
 
     public void hideScorePublishPanel()
