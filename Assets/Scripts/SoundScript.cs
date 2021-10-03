@@ -23,6 +23,8 @@ public class SoundScript : MonoBehaviour
 
     public void playBackgroundMusic()
     {
+        if (backgroundMusic.playOnAwake) return;
+        
         backgroundMusic.Play();
     }
     public void stopBackgroundMusic()
